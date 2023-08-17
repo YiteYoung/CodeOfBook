@@ -6,11 +6,11 @@
 
 #define scanf scanf_s
 
-int _1stCode(void);
-int _2ndCode(void);
-int _3rdCode(void);
-int _4thCode(void);
-int _5thCode(void);
-int _6thCode(void);
+static int _1stCode(void);
+static int _2ndCode(void);
+static int _3rdCode(void);
+static int _4thCode(void);
+static int _5thCode(void);
+static int _6thCode(void);
 
 #endif

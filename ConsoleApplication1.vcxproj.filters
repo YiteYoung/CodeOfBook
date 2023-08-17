@@ -30,12 +30,18 @@
     <ClCompile Include="source\charter3Test.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="source\charter4Test.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headfile\charter1Test.h">
       <Filter>头文件\headfile</Filter>
     </ClInclude>
     <ClInclude Include="headfile\charter3Test.h">
+      <Filter>头文件\headfile</Filter>
+    </ClInclude>
+    <ClInclude Include="headfile\charter4Test.h">
       <Filter>头文件\headfile</Filter>
     </ClInclude>
   </ItemGroup>
