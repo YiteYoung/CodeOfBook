@@ -18,25 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.c" />
-    <ClCompile Include="source\charter1Test.c" />
-    <ClCompile Include="source\charter2Test.c" />
-    <ClCompile Include="source\charter3Test.c" />
-    <ClCompile Include="source\charter4Test.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="headfile\charter1Test.h" />
-    <ClInclude Include="headfile\charter3Test.h" />
-    <ClInclude Include="headfile\charter4Test.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{214a8614-9df2-42d2-9508-85fb595b0cd7}</ProjectGuid>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <ProjectGuid>{491decaa-7b19-45b0-a1af-9625810f8fb2}</ProjectGuid>
+    <RootNamespace>CodeOfbook</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>BookCode</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -101,8 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard_C>stdc11</LanguageStandard_C>
-      <AdditionalIncludeDirectories>F:\study\课设\c语言\unuseful\ConsoleApplication1\headfile;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Project\CLearning\CodeOfBook\headfile;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,6 +139,17 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source\charter1Test.c" />
+    <ClCompile Include="source\charter2Test.c" />
+    <ClCompile Include="source\charter3Test.c" />
+    <ClCompile Include="source\charter4Test.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headfile\charter1Test.h" />
+    <ClInclude Include="headfile\charter3Test.h" />
+    <ClInclude Include="headfile\charter4Test.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
