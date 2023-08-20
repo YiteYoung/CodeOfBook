@@ -23,9 +23,9 @@ int main()
 		case 10: flag = _10thCode(); break;
 		case 11: flag = _11stCode(); break;
 		case 12: flag = _12ndCode(); break;
-		//case 13: flag = _13rdCode(); break;
-		//case 14: flag = _14thCode(); break;
-		//case 15: flag = _15thCode(); break;
+		case 13: flag = _13rdCode(); break;
+		case 14: flag = _14thCode(); break;
+		case 15: flag = _15thCode(); break;
 		//case 16: flag = _16thCode(); break;
 		//case 17: flag = _17thCode(); break;
 		//case 18: flag = _18thCode(); break;

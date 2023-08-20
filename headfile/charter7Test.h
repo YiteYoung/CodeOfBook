@@ -2,7 +2,9 @@
 #define _CHARTER7TEST_H_
 
 #include <stdio.h>
-#include "stdbool.h"
+#include <stdbool.h>
+#include <ctype.h>
+#include <math.h>
 
 #define scanf scanf_s
 
