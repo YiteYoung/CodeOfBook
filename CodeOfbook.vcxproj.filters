@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\charter1Test.c">
+    <ClCompile Include="source\charter2Test.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="source\charter2Test.c">
+    <ClCompile Include="source\charter1Test.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="source\charter3Test.c">
@@ -27,15 +27,39 @@
     <ClCompile Include="source\charter4Test.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\charter5Test .c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\charter6Test.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\charter7Test.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headfile\charter1Test.h">
+    <ClInclude Include="headfile\charter2Test.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="headfile\charter3Test.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="headfile\charter4Test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="headfile\charter5Test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="headfile\charter1Test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="headfile\charter6Test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="headfile\charter7Test.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
