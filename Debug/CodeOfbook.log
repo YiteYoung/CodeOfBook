@@ -1,7 +1,2 @@
-﻿  charter7Test.c
-F:\Project\CLearning\CodeOfBook\source\charter7Test.c(176,8): warning C4477: “scanf_s”: 格式字符串“%c”需要类型“unsigned int”的参数，但可变参数 4 拥有了类型“int *”
-F:\Project\CLearning\CodeOfBook\source\charter7Test.c(176,8): message : 此参数用作缓冲区大小
-F:\Project\CLearning\CodeOfBook\source\charter7Test.c(176,8): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
-F:\Project\CLearning\CodeOfBook\source\charter7Test.c(176,8): message : 占位符和其参数预计 6 可变参数，但提供的却是 5 参数
-F:\Project\CLearning\CodeOfBook\source\charter7Test.c(176,8): message : 缺失的可变参数 6 为格式字符串“%d”所需
+﻿  charter8Test.c
   CodeOfbook.vcxproj -> F:\Project\CLearning\CodeOfBook\Debug\CodeOfbook.exe

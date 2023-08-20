@@ -419,7 +419,7 @@ int _13rdCode()
 int _14thCode()
 {
 	printf("Enter a positive number:");
-	double num, result;
+	double num;
 	scanf("%lf", &num);
 	double xk = 1, xk1 = 0;
 	if (num != 0)

@@ -148,6 +148,7 @@
     <ClCompile Include="source\charter5Test .c" />
     <ClCompile Include="source\charter6Test.c" />
     <ClCompile Include="source\charter7Test.c" />
+    <ClCompile Include="source\charter8Test.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headfile\charter1Test.h" />
@@ -157,6 +158,7 @@
     <ClInclude Include="headfile\charter5Test.h" />
     <ClInclude Include="headfile\charter6Test.h" />
     <ClInclude Include="headfile\charter7Test.h" />
+    <ClInclude Include="headfile\charter8Test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

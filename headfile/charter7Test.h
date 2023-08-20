@@ -8,20 +8,20 @@
 
 #define scanf scanf_s
 
-  int _1stCode(void);
-  int _2ndCode(void);
-  int _3rdCode(void);
-  int _4thCode(void);
-  int _5thCode(void);
-  int _6thCode(void);
-  int _7thCode(void);
-  int _8thCode(void);
-  int _9thCode(void);
-  int _10thCode(void);
-  int _11stCode(void);
-  int _12ndCode(void);
-  int _13rdCode(void);
-  int _14thCode(void);
-  int _15thCode(void);
+static int _1stCode(void);
+static int _2ndCode(void);
+static int _3rdCode(void);
+static int _4thCode(void);
+static int _5thCode(void);
+static int _6thCode(void);
+static int _7thCode(void);
+static int _8thCode(void);
+static int _9thCode(void);
+static int _10thCode(void);
+static int _11stCode(void);
+static int _12ndCode(void);
+static int _13rdCode(void);
+static int _14thCode(void);
+static int _15thCode(void);
 
 #endif
