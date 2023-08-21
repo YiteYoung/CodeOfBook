@@ -128,7 +128,7 @@ int _5thCode()
 		printf("%3d    ", year);
 		for (i = 0; i < NUM_RATES; i++) {
 			for (month = 1; month <= 12; month++)
-				value[i] *= (double)(low_rate + i) / 12.0 / 100.0 + 1.0;
+				value[i] *= ((double)low_rate + i) / 12.0 / 100.0 + 1.0;
 			printf("%7.2f", value[i]);
 		}
 		printf("\n");
@@ -280,7 +280,7 @@ int _9thCode()
 		printf("\n");
 	}
 	char letter = 65;
-	int count = 36;
+	int count = 26;
 	int nowRow = 0, nowCol = 0;
 	map[nowRow][nowCol] = letter++; //A£ºZ = 65£º90 
 	arrived[nowRow][nowCol]= true;
@@ -375,42 +375,296 @@ int _9thCode()
 	return 1;
 }
 
+#define MINTIME(x,y) (x) * 60 + (y)
+
 int _10thCode()
 {
+	printf("Enter a 24-hour time:");
+	int h24, m24;
+	scanf("%d:%d", &h24, &m24);
+	int mintues, minBis[8], min = MINTIME(24, 60);
+	mintues = MINTIME(h24, m24);
+	int takeofftime[8] = { MINTIME(8, 0), MINTIME(9, 43), MINTIME(11, 19), MINTIME(12,47),
+						   MINTIME(14,0), MINTIME(15,45),MINTIME(17, 0), MINTIME(21, 45) };
+	int arrivetime[8] = { MINTIME(10,16), MINTIME(11,52), MINTIME(13,31), MINTIME(15,0),
+						MINTIME(16,8), MINTIME(17,55), MINTIME(21,20), MINTIME(23,58), };
+	int minCount = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		minBis[i] = abs(mintues - takeofftime[i]);
+		if (min > minBis[i])
+		{
+			min = minBis[i];
+			minCount = i;
+		}
+	}
+	h24 = takeofftime[minCount] / 60;
+	m24 = takeofftime[minCount] - (h24 * 60);
+	if (h24 > 12)
+	{
+		printf("Closest departure time is %2d:%2d p.m.,", h24 - 12, m24);
+		if (arrivetime[minCount] > (12 * 60))
+		{
+			printf("arriving at %2d:%2d p.m.", ((arrivetime[minCount] / 60) - 12), (arrivetime[minCount] - ((arrivetime[minCount] / 60) * 60)));
+		}
+		else
+		{
+			printf("arriving at %2d:%2d a.m.", (arrivetime[minCount] / 60), (arrivetime[minCount] - ((arrivetime[minCount] / 60) * 60)));
+		}
+	}
+	else
+	{
+		printf("Closest departure time is %2d:%2d a.m.,", h24, m24);
+		if (arrivetime[minCount] > (12 * 60))
+		{
+			printf("arriving at %2d:%2d p.m.", (arrivetime[minCount] / 60) - 12, arrivetime[minCount] - ((arrivetime[minCount] / 60) * 60));
+		}
+		else
+		{
+			printf("arriving at %2d:%2d a.m.", arrivetime[minCount] / 60, arrivetime[minCount] - ((arrivetime[minCount] / 60) * 60));
+		}
+	}
 	return 1;
 }
 
 int _11stCode()
 {
+	printf("Enter phone number:");
+	char num[50];
+	int i = 0;
+	int length;
+	while ((num[i] = getchar()) != '\n')
+	{
+		i++;
+	}
+	length = i;
+	printf("In numberic form:");
+	for (i = 0; i < length; i++)
+	{
+		if (num[i] == 'A' || num[i] == 'B' || num[i] == 'C')
+		{
+			num[i] = '2';
+		}
+		else if (num[i] == 'D' || num[i] == 'E' || num[i] == 'F')
+		{
+			num[i] = '3';
+		}
+		else if (num[i] == 'G' || num[i] == 'H' || num[i] == 'I')
+		{
+			num[i] = '4';
+		}
+		else if (num[i] == 'J' || num[i] == 'K' || num[i] == 'L')
+		{
+			num[i] = '5';
+		}
+		else if (num[i] == 'M' || num[i] == 'N' || num[i] == 'O')
+		{
+			num[i] = '6';
+		}
+		else if (num[i] == 'P' || num[i] == 'Q' || num[i] == 'R' || num[i] == 'S')
+		{
+			num[i] = '7';
+		}
+		else if (num[i] == 'T' || num[i] == 'U' || num[i] == 'V')
+		{
+			num[i] = '8';
+		}
+		else if (num[i] == 'W' || num[i] == 'X' || num[i] == 'Y' || num[i] == 'Z')
+		{
+			num[i] = '9';
+		}
+		for (i = 0; i < length; i++)
+		{
+			printf("%c", num[i]);
+		}
+	}
 	return 1;
 }
 
 int _12ndCode()
 {
+	int value[26] = { 1,3,3,2,1,4,2,4,1,8,5,1,3,1,1,3,10,1,1,1,1,4,4,8,4,10 };
+	printf("Enter a word:");
+	char num[50];
+	int i = 0;
+	int length, sum = 0;
+	while ((num[i] = getchar()) != '\n')
+	{
+		i++;
+	}
+	length = i;
+	for (i = 0; i < length; i++)
+	{
+		num[i] = toupper(num[i]);
+		sum += value[(int)num[i] - 65];
+	}
+	printf("Scrabble value:%d", sum);
 	return 1;
 }
 
 int _13rdCode()
 {
+	printf("Enter frist name and last name:");
+	char fristName[20], lastName;
+	int i = 0;
+	while ((fristName[i] = getchar()) != ' ')
+	{
+		i++;
+	}
+	lastName = getchar();
+	while (lastName != '\n')
+	{
+		printf("%c", lastName);
+		lastName = getchar();
+	}
+	printf("£¬%c.", fristName[0]);
 	return 1;
 }
 
 int _14thCode()
 {
+	char sentence[100] = { 0 }, ch, stop_char = ' ';
+	int index = 0;
+
+	printf("Enter a sentence: ");
+	ch = getchar();
+	while ((ch = getchar()) != '\n' && index < 100)
+	{
+		if (ch == ' ' && sentence[0] == 0)
+		{
+			continue;
+		}
+
+		if (ch == '.' || ch == '?' || ch == '!')
+		{
+			stop_char = ch;
+			break;
+		}
+
+		sentence[index++] = ch;
+	}
+
+	printf("Reversal of sentence: ");
+	for (int i = 100 - 1; i >= 0; i--)
+	{
+		ch = sentence[i];
+		if (ch == ' ' || i == 0) 
+		{
+			index = i < 0 ? 0 : i;
+			while (sentence[index] && sentence[index] != ' ') 
+			{
+				putchar(sentence[index++]);
+			}
+
+			if (i && index != (i == 0 ? 0 : i + 1)) putchar(' ');
+		}
+	}
+	printf("%c\n", stop_char);
 	return 1;
 }
 
 int _15thCode()
 {
+	char sentence[100] = { 0 };
+	char ch;
+	int index = 0, shift;
+
+	printf("Enter message to be encrypted: ");
+	ch = getchar();
+	while ((ch = getchar()) != '\n' && index < 100) 
+	{
+		sentence[index++] = ch;
+	}
+
+	printf("Enter shift amount (1-25): ");
+	scanf("%d", &shift);
+
+	printf("Encrypted message: ");
+	for (int i = 0; i < index; i++)
+	{
+		ch = sentence[i];
+		if (isupper(ch))
+		{
+			ch = ((ch - 'A') + shift) % 26 + 'A';
+		}
+		else if (islower(ch))
+		{
+			ch = ((ch - 'a') + shift) % 26 + 'a';
+		}
+		putchar(ch);
+	}
 	return 1;
 }
 
 int _16thCode()
 {
+	int num[50] = { 0 };
+	char ch = 65;
+	printf("Enter frist word:");
+	ch = getchar();
+	while ((ch = getchar()) != '\n')
+	{
+		ch = tolower(ch);
+		num[(ch - 'a') < 0 ? 0 : (ch - 'a')] += 1;
+	}
+	printf("Enter sencond word:");
+	while ((ch = tolower(getchar())) != '\n')
+	{
+		num[(ch - 'a') < 0 ? 0 : (ch - 'a')] -= 1;
+	}
+	for (int i = 0; i < 26; i++)
+	{
+		if (num[i] > 0)
+		{
+			printf("The words are not anagrams.");
+			break;
+		}
+		else if (i == 25)
+		{
+			printf("The words are anagrams.");
+		}
+		
+	}
 	return 1;
 }
 
 int _17thCode()
 {
+	int n, x = 0, y, next_x, next_y;
+
+	printf("This program creates a magic square of a specified size.\n"
+		"The size must be an odd number between 1 and 99.\n"
+		"Enter size of magic square : ");
+	scanf("%d", &n);
+
+	y = n / 2;
+
+	int matrix[50][50] = { 0 };
+
+	matrix[x][y] = 1;
+	for (int i = 2; i <= n * n; i++)
+	{
+		next_x = (x - 1 + n) % n;
+		next_y = (y + 1 + n) % n;
+
+		if (matrix[next_x][next_y])
+		{
+			x = x + 1;
+		}
+		else {
+			x = next_x;
+			y = next_y;
+		}
+		matrix[x][y] = i;
+	}
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			printf("%4d", matrix[i][j]);
+		}
+		printf("\n");
+	}
 	return 1;
 }
