@@ -1,4 +1,4 @@
-#include "charter8Test.h"
+#include "charter9Test.h"
 
 int main()
 {
@@ -19,15 +19,15 @@ int main()
 		case 6: flag = _6thCode(); break;
 		case 7: flag = _7thCode(); break;
 		case 8: flag = _8thCode(); break;
-		case 9: flag = _9thCode(); break;
-		case 10: flag = _10thCode(); break;
-		case 11: flag = _11stCode(); break;
-		case 12: flag = _12ndCode(); break;
-		case 13: flag = _13rdCode(); break;
-		case 14: flag = _14thCode(); break;
-		case 15: flag = _15thCode(); break;
-		case 16: flag = _16thCode(); break;
-		case 17: flag = _17thCode(); break;
+		//case 9: flag = _9thCode(); break;
+		//case 10: flag = _10thCode(); break;
+		//case 11: flag = _11stCode(); break;
+		//case 12: flag = _12ndCode(); break;
+		//case 13: flag = _13rdCode(); break;
+		//case 14: flag = _14thCode(); break;
+		//case 15: flag = _15thCode(); break;
+		//case 16: flag = _16thCode(); break;
+		//case 17: flag = _17thCode(); break;
 		//case 18: flag = _18thCode(); break;
 		//case 19: flag = _19thCode(); break;
 		//case 20: flag = _20thCode(); break;
